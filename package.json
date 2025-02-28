@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"deploy": "tsc && vite build && wrangler pages deploy dist --prod"
+		"deploy": "tsc && vite build && wrangler pages deploy dist --branch production"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
