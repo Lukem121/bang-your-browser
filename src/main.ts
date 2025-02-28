@@ -14,12 +14,11 @@ function createDefaultPageContent(): string {
           A faster alternative to DuckDuckGo's bang redirects. Add this URL as a custom search engine in your browser.
           <a href="https://duckduckgo.com/bang.html" target="_blank" class="link">Supports all DuckDuckGo bangs</a>.
         </p>
-        
         <div class="search-url-card">
           <h3 class="url-title">Add this URL to your browser:</h3>
           <div class="url-container">
-            <code class="search-url">https://bangyourbrowser.site/?q=%s</code>
-            <button class="copy-button" onclick="navigator.clipboard.writeText('https://bangyourbrowser.site/?q=%s').then(() => { this.textContent = 'Copied!'; setTimeout(() => { this.textContent = 'Copy'; }, 2000); })">Copy</button>
+            <code class="search-url">https://www.bangyourbrowser.site/?q=%s</code>
+            <button class="copy-button" onclick="navigator.clipboard.writeText('https://www.bangyourbrowser.site/?q=%s').then(() => { this.textContent = 'Copied!'; setTimeout(() => { this.textContent = 'Copy'; }, 2000); })">Copy</button>
           </div>
           <p class="url-hint">Use this as your custom search engine URL in Chrome, Firefox, Edge, or any modern browser</p>
         </div>

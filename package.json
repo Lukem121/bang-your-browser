@@ -6,7 +6,8 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"deploy": "tsc && vite build && wrangler pages deploy dist --prod"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
@@ -17,6 +18,12 @@
 		"vite-plugin-pwa": "^0.21.1"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": ["@biomejs/biome"]
+		"onlyBuiltDependencies": [
+			"@biomejs/biome",
+			"esbuild"
+		],
+		"ignoredBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
