@@ -2,7 +2,7 @@
 
 https://bangyourbrowser.site
 
-A Cloudflare Worker that provides DuckDuckGo-style bang search functionality. This service allows you to quickly search various websites using shorthand "bang" commands.
+A Progressive Web Application (PWA) that provides DuckDuckGo-style bang search functionality. This service allows you to quickly search various websites using shorthand "bang" commands, running entirely in your browser.
 
 ## What are Bangs?
 
@@ -45,18 +45,19 @@ Where `%s` is the placeholder for your search query.
 
 ## Technical Details
 
-This project is built as a Cloudflare Worker using TypeScript. It maintains a database of bang commands and their corresponding search URLs, redirecting users to the appropriate search results page based on their query.
+This project is built as a Progressive Web Application using TypeScript and Vite. It maintains a local database of bang commands and their corresponding search URLs, redirecting users to the appropriate search results page based on their query. The application runs entirely in the browser, making it fast and privacy-friendly.
 
-## Development
+### Key Features
 
-### Prerequisites
+- Runs completely client-side as a PWA
+- No server required - all redirects happen in your browser
+- Can work offline once installed
+- Saves your default bang preference locally
+- Lightweight and fast
 
-- Node.js
-- npm or yarn
-
-### Setup
+### Setup Local
 
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Run locally: `npm run dev`
-4. Deploy: `npm run deploy`
+4. Build for production: `npm run build`
