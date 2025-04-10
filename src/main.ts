@@ -1,8 +1,6 @@
 import { bangs } from "./bang-map";
 import "./global.css";
 
-// Constants
-const LS_DEFAULT_BANG_KEY = "default-bang";
 
 // Function to create HTML content for the default page
 function createDefaultPageContent(): string {
@@ -52,7 +50,7 @@ function createDefaultPageContent(): string {
           </div>
           
           <div class="default-bang">
-            <p>Your default bang: <span class="highlight">${LS_DEFAULT_BANG}</span></p>
+            <p>Your default bang: <span class="highlight">${DEFAULT_BANG}</span></p>
             <p class="hint">(Used when no bang is specified in your search)</p>
           </div>
         </div>
@@ -279,24 +277,25 @@ function noSearchDefaultPageRender() {
 }
 
 const bangMap = new Map(bangs);
-const LS_DEFAULT_BANG = localStorage.getItem(LS_DEFAULT_BANG_KEY) ?? "g";
-const defaultBang = bangMap.get(LS_DEFAULT_BANG);
+const DEFAULT_BANG = "g"
 
 function getBangredirectUrl(): string | null {
 	const url = new URL(window.location.href);
 	const query = url.searchParams.get("q")?.trim() ?? "";
 
+
 	if (!query) {
-		console.log("No query");
 		noSearchDefaultPageRender();
 		return null;
 	}
 
+
 	const match = query.match(/!(\S+)/i);
 	const bangCandidate = match?.[1]?.toLowerCase();
-	const selectedBang = bangCandidate
-		? (bangMap.get(bangCandidate) ?? defaultBang)
-		: null;
+
+
+	const selectedBang = bangMap.get(bangCandidate ?? DEFAULT_BANG);
+
 
 	// Remove the first bang from the query
 	const cleanQuery = query.replace(/!\S+\s*/i, "").trim();

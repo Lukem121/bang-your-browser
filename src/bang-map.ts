@@ -11,6 +11,18 @@ type Bang = {
 
 export const bangs: Array<[string, Bang]>  = [
 	[
+		"fix",
+		{
+			c: "AI",
+			d: "www.chatgpt.com",
+			r: 0,
+			s: "ChatGPT",
+			sc: "AI",
+			t: "gpt",
+			u: "https://chat.openai.com/?model=gpt-4o&q=Fix%20spelling/grammer%3A%0A={{{s}}}",
+		},
+	],
+	[
 		"gpt",
 		{
 			c: "AI",
