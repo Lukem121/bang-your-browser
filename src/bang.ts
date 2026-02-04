@@ -1,12 +1,12 @@
 export const bangs = [
   {
     c: "AI", // Category
-    d: "www.chatgpt.com", // Link
+    d: "www.openrouter.ai", // Link
     r: 0, // Rank
-    s: "ChatGPT", // Search term
+    s: "OpenRouter", // Search term
     sc: "AI", // Subcategory
-    t: "gpt", // Short name
-    u: "https://chat.openai.com/?model=gpt-4o&q={{{s}}}", // URL
+    t: "or", // Short name
+    u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&reasoning=none&presetModel=x-ai%2Fgrok-4.1-fast&message={{{s}}}", // URL
   },
   {
     c: "AI",
@@ -41317,13 +41317,13 @@ export const bangs = [
     u: "https://geizhals.de/?fs={{{s}}}",
   },
   {
-    c: "Tech", 
-    d: "github.com", 
-    r: 15975, 
-    s: "GitHub", 
-    sc: "Programming", 
-    t: "gh", 
-    u: "https://github.com/search?utf8=%E2%9C%93&q={{{s}}}", 
+    c: "Tech",
+    d: "github.com",
+    r: 15975,
+    s: "GitHub",
+    sc: "Programming",
+    t: "gh",
+    u: "https://github.com/search?utf8=%E2%9C%93&q={{{s}}}",
   },
   {
     c: "Tech",
@@ -78034,15 +78034,6 @@ export const bangs = [
     sc: "Online",
     t: "orms",
     u: "https://www.ormsdirect.co.za/catalogsearch/result/index/?q={{{s}}}",
-  },
-  {
-    c: "Research",
-    d: "or.justice.cz",
-    r: 3,
-    s: "Obchodn\u00ed rejst\u0159\u00edk \u2013 Ministerstvo spravedlnosti \u010cesk\u00e9 republiky",
-    sc: "Government",
-    t: "or",
-    u: "https://or.justice.cz/ias/ui/rejstrik-$firma?jenPlatne=PLATNE&nazev={{{s}}}&polozek=50&typHledani=STARTS_WITH",
   },
   {
     c: "Entertainment",

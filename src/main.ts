@@ -4,7 +4,7 @@ import "./global.css";
 
 // Function to create HTML content for the default page
 function createDefaultPageContent(): string {
-	return `
+  return `
     <div class="container">
       <div class="content">
         <h1 class="title">!BANG</h1>
@@ -15,8 +15,8 @@ function createDefaultPageContent(): string {
         <div class="search-url-card">
           <h3 class="url-title">Add this URL to your browser:</h3>
           <div class="url-container">
-            <code class="search-url">https://www.bangyourbrowser.site/?q=%s</code>
-            <button class="copy-button" onclick="navigator.clipboard.writeText('https://www.bangyourbrowser.site/?q=%s').then(() => { this.textContent = 'Copied!'; setTimeout(() => { this.textContent = 'Copy'; }, 2000); })">Copy</button>
+            <code class="search-url">https://www.bangit.click/?q=%s</code>
+            <button class="copy-button" onclick="navigator.clipboard.writeText('https://www.bangit.click/?q=%s').then(() => { this.textContent = 'Copied!'; setTimeout(() => { this.textContent = 'Copy'; }, 2000); })">Copy</button>
           </div>
           <p class="url-hint">Use this as your custom search engine URL in Chrome, Firefox, Edge, or any modern browser</p>
         </div>
@@ -270,53 +270,53 @@ function createDefaultPageContent(): string {
 }
 
 function noSearchDefaultPageRender() {
-	const app = document.querySelector<HTMLDivElement>("#app");
-	if (!app) return;
+  const app = document.querySelector<HTMLDivElement>("#app");
+  if (!app) return;
 
-	app.innerHTML = createDefaultPageContent();
+  app.innerHTML = createDefaultPageContent();
 }
 
 const bangMap = new Map(bangs);
 const DEFAULT_BANG = "g"
 
 function getBangredirectUrl(): string | null {
-	const url = new URL(window.location.href);
-	const query = url.searchParams.get("q")?.trim() ?? "";
+  const url = new URL(window.location.href);
+  const query = url.searchParams.get("q")?.trim() ?? "";
 
 
-	if (!query) {
-		noSearchDefaultPageRender();
-		return null;
-	}
+  if (!query) {
+    noSearchDefaultPageRender();
+    return null;
+  }
 
 
-	const match = query.match(/!(\S+)/i);
-	const bangCandidate = match?.[1]?.toLowerCase();
+  const match = query.match(/!(\S+)/i);
+  const bangCandidate = match?.[1]?.toLowerCase();
 
 
-	const selectedBang = bangMap.get(bangCandidate ?? DEFAULT_BANG);
+  const selectedBang = bangMap.get(bangCandidate ?? DEFAULT_BANG);
 
 
-	// Remove the first bang from the query
-	const cleanQuery = query.replace(/!\S+\s*/i, "").trim();
+  // Remove the first bang from the query
+  const cleanQuery = query.replace(/!\S+\s*/i, "").trim();
 
-	// Format of the url is:
-	// https://www.google.com/search?q={{{s}}}
-	const searchUrl = selectedBang?.u.replace(
-		"{{{s}}}",
-		// Replace %2F with / to fix formats like "!ghr+t3dotgg/unduck"
-		encodeURIComponent(cleanQuery).replace(/%2F/g, "/"),
-	);
+  // Format of the url is:
+  // https://www.google.com/search?q={{{s}}}
+  const searchUrl = selectedBang?.u.replace(
+    "{{{s}}}",
+    // Replace %2F with / to fix formats like "!ghr+t3dotgg/unduck"
+    encodeURIComponent(cleanQuery).replace(/%2F/g, "/"),
+  );
 
-	if (!searchUrl) return null;
+  if (!searchUrl) return null;
 
-	return searchUrl;
+  return searchUrl;
 }
 
 function doRedirect() {
-	const searchUrl = getBangredirectUrl();
-	if (!searchUrl) return;
-	window.location.replace(searchUrl);
+  const searchUrl = getBangredirectUrl();
+  if (!searchUrl) return;
+  window.location.replace(searchUrl);
 }
 
 doRedirect();

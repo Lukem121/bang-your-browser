@@ -1,6 +1,6 @@
 # Bang Your Browser
 
-https://www.bangyourbrowser.site
+https://www.bangit.click
 
 A Progressive Web Application (PWA) that provides DuckDuckGo-style bang search functionality. This service allows you to quickly search various websites using shorthand "bang" commands, running entirely in your browser.
 
@@ -17,21 +17,21 @@ Bangs are shortcuts that start with an exclamation mark (!) followed by a keywor
 You can use this service by visiting:
 
 ```
-https://www.bangyourbrowser.site/?q=your search query
+https://www.bangit.click/?q=your search query
 ```
 
 ### Examples:
 
-- Search Google: `https://www.bangyourbrowser.site/?q=weather forecast`
-- Search YouTube: `https://www.bangyourbrowser.site/?q=!yt how to make pasta`
-- Search Amazon: `https://www.bangyourbrowser.site/?q=!a wireless headphones`
+- Search Google: `https://www.bangit.click/?q=weather forecast`
+- Search YouTube: `https://www.bangit.click/?q=!yt how to make pasta`
+- Search Amazon: `https://www.bangit.click/?q=!a wireless headphones`
 
 ## Set as Search Engine
 
 You can set this service as your browser's search engine by using the following URL:
 
 ```
-https://www.bangyourbrowser.site/?q=%s
+https://www.bangit.click/?q=%s
 ```
 
 Where `%s` is the placeholder for your search query.
