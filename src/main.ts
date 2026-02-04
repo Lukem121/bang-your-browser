@@ -4,6 +4,7 @@ import "./global.css";
 
 // Function to create HTML content for the default page
 function createDefaultPageContent(): string {
+  const searchEngineUrl = `${window.location.origin}/?q=%s`;
   return `
     <div class="container">
       <div class="content">
@@ -15,8 +16,8 @@ function createDefaultPageContent(): string {
         <div class="search-url-card">
           <h3 class="url-title">Add this URL to your browser:</h3>
           <div class="url-container">
-            <code class="search-url">https://www.bangit.click/?q=%s</code>
-            <button class="copy-button" onclick="navigator.clipboard.writeText('https://www.bangit.click/?q=%s').then(() => { this.textContent = 'Copied!'; setTimeout(() => { this.textContent = 'Copy'; }, 2000); })">Copy</button>
+            <code class="search-url">${searchEngineUrl}</code>
+            <button class="copy-button" onclick="navigator.clipboard.writeText('${searchEngineUrl}').then(() => { this.textContent = 'Copied!'; setTimeout(() => { this.textContent = 'Copy'; }, 2000); })">Copy</button>
           </div>
           <p class="url-hint">Use this as your custom search engine URL in Chrome, Firefox, Edge, or any modern browser</p>
         </div>
