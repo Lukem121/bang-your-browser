@@ -58,6 +58,69 @@ This project is built as a Progressive Web Application using TypeScript and Vite
 ### Setup Local
 
 1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run locally: `npm run dev`
-4. Build for production: `npm run build`
+2. Install dependencies: `pnpm i`
+3. Run locally: `pnpm run dev`
+4. Build for production: `pnpm run build`
+
+## Deploying (Cloudflare Pages)
+
+This site is deployed as a **static Vite build** to **Cloudflare Pages**.
+
+### Prereqs (one-time per machine)
+
+- Node + pnpm installed
+- Wrangler installed globally:
+
+```bash
+npm i -g wrangler
+```
+
+### Authenticate Wrangler (one-time per machine)
+
+If you’ve never deployed from this computer (or your auth expired):
+
+```bash
+wrangler login
+```
+
+Sanity check:
+
+```bash
+wrangler whoami
+```
+
+### Deploy
+
+From the repo root:
+
+```bash
+pnpm i
+pnpm run deploy
+```
+
+That runs:
+
+- `tsc && vite build` (produces `dist/`)
+- `wrangler pages deploy dist --branch production`
+
+Wrangler will print a **Pages preview URL** like `https://<hash>.search-engine-with-bangs-pwa.pages.dev`.
+
+### Custom domain (when changing domains)
+
+The custom domain is configured in the **Cloudflare dashboard**, not in this repo.
+
+To point the app at a new domain (e.g. moving from `bangyourbrowser.site` to `bangit.click`):
+
+- Cloudflare Dashboard → **Workers & Pages** → **Pages** → `search-engine-with-bangs-pwa`
+- **Custom domains**
+  - Add `bangit.click` (and optionally `www.bangit.click`)
+  - Follow the DNS instructions Cloudflare shows
+  - (Optional) remove the old domain and/or set a redirect between apex and `www`
+
+### Useful commands
+
+List Pages projects (helps confirm the project name on a new machine/account):
+
+```bash
+wrangler pages project list
+```
