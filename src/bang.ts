@@ -6,7 +6,7 @@ export const bangs = [
     s: "OpenRouter", // Search term
     sc: "AI", // Subcategory
     t: "or", // Short name
-    u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&reasoning=none&presetModel=x-ai%2Fgrok-4.1-fast&message={{{s}}}", // URL
+    u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&presetModel=openai%2Fgpt-5.2&message={{{s}}}", // URL
   },
   {
     c: "AI",

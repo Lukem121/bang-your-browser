@@ -19,7 +19,7 @@ export const bangs: Array<[string, Bang]> = [
 			s: "OpenRouter",
 			sc: "AI",
 			t: "gpt",
-			u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&reasoning=none&presetModel=x-ai%2Fgrok-4.1-fast&message={{{s}}}",
+			u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&presetModel=openai%2Fgpt-5.2&message={{{s}}}",
 		},
 	],
 	[
