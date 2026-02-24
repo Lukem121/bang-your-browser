@@ -26,12 +26,12 @@ export const bangs: Array<[string, Bang]> = [
 		"gpt",
 		{
 			c: "AI",
-			d: "www.chatgpt.com",
+			d: "www.loris.wtf",
 			r: 0,
-			s: "ChatGPT",
+			s: "Loris",
 			sc: "AI",
-			t: "gpt",
-			u: "https://chat.openai.com/?model=gpt-4o&q={{{s}}}",
+			t: "loris",
+			u: "https://www.loris.wtf/chat/new?autoRun=true&message={{{s}}}",
 		},
 	],
 	[
