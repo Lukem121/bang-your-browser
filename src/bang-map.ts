@@ -14,12 +14,12 @@ export const bangs: Array<[string, Bang]> = [
 		"fix",
 		{
 			c: "AI",
-			d: "www.openrouter.ai",
+			d: "www.loris.wtf",
 			r: 0,
-			s: "OpenRouter",
+			s: "Loris",
 			sc: "AI",
-			t: "gpt",
-			u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&presetModel=openai%2Fgpt-5.2&message={{{s}}}",
+			t: "loris",
+			u: "https://www.loris.wtf/chat/new?command=humanize&autoRun=true&message={{{s}}}",
 		},
 	],
 	[

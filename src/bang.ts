@@ -1,12 +1,12 @@
 export const bangs = [
   {
     c: "AI", // Category
-    d: "www.openrouter.ai", // Link
+    d: "www.loris.wtf", // Link
     r: 0, // Rank
-    s: "OpenRouter", // Search term
+    s: "Loris", // Search term
     sc: "AI", // Subcategory
-    t: "or", // Short name
-    u: "https://openrouter.ai/chat?preset=fix-text&presetName=Fix+spelling%2Fgrammer&presetModel=openai%2Fgpt-5.2&message={{{s}}}", // URL
+    t: "loris", // Short name
+    u: "https://www.loris.wtf/chat/new?command=humanize&autoRun=true&message={{{s}}}", // URL
   },
   {
     c: "AI",
