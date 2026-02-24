@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "picocolors": "1.1.1",
     "typescript": "~5.7.2",
     "vite": "^6.1.0"
   },
@@ -24,6 +25,9 @@
     ],
     "ignoredBuiltDependencies": [
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "picocolors": "1.1.1"
+    }
   }
 }
